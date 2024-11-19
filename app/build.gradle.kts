@@ -1,14 +1,17 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("kotlin-parcelize")
+    kotlin("kapt")
 }
 
 android {
-    namespace = "com.example.agarang"
+    namespace = "com.example.myapplication"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.agarang"
+        applicationId = "com.example.myapplication"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -80,3 +83,4 @@ dependencies {
 
     implementation ("com.squareup.okhttp3:okhttp-urlconnection:4.9.1")
 }
+

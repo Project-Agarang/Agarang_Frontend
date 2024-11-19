@@ -13,15 +13,19 @@
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Agarang"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,6 +33,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".Onboarding.OnboardingActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Memory.MemoryMainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@drawable/style_music_cover" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
